@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import UserCard from './compenents/usercard';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const utilisateur = {
+    nom: "Doe",
+    prénom: "John",
+    email: "john.doe@example.com",
+    ImageUrl: "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg",
+   };
+  return <>
+  <UserCard nom={utilisateur.nom} prenom={utilisateur.prénom} email={utilisateur.email} img={utilisateur.ImageUrl} />
+  </>
 }
 
 export default App;
